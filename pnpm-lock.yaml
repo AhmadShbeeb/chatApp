@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  colors: ^1.4.0
   dotenv: ^16.0.3
   eslint: ^8.0.1
   eslint-config-prettier: ^8.5.0
@@ -8,15 +9,18 @@ specifiers:
   eslint-plugin-prettier: ^4.2.1
   express: ^4.18.2
   express-async-handler: ^1.2.0
+  helmet: ^6.0.0
   jsonwebtoken: ^8.5.1
   mongoose: ^6.6.5
   nodemon: ^2.0.20
   prettier: ^2.7.1
 
 dependencies:
+  colors: 1.4.0
   dotenv: 16.0.3
   express: 4.18.2
   express-async-handler: 1.2.0
+  helmet: 6.0.0
   jsonwebtoken: 8.5.1
   mongoose: 6.6.5
 
@@ -286,6 +290,11 @@ packages:
   /color-name/1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: true
+
+  /colors/1.4.0:
+    resolution: {integrity: sha512-a+UqTh4kgZg/SlGvfbzDHpgRu7AAQOmmqRHJnxhRZICKFUT91brVhNNt58CMWU9PsBbv3PDCZUHbVxuDiH2mtA==}
+    engines: {node: '>=0.1.90'}
+    dev: false
 
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -820,6 +829,11 @@ packages:
     engines: {node: '>= 0.4.0'}
     dependencies:
       function-bind: 1.1.1
+
+  /helmet/6.0.0:
+    resolution: {integrity: sha512-FO9RpR1wNJepH/GbLPQVtkE2eESglXL641p7SdyoT4LngHFJcZheHMoyUcjCZF4qpuMMO1u5q6RK0l9Ux8JBcg==}
+    engines: {node: '>=14.0.0'}
+    dev: false
 
   /http-errors/2.0.0:
     resolution: {integrity: sha512-FtwrG/euBzaEjYeRqOgly7G0qviiXoJWnvEH2Z1plBdXgbyjv34pHTSb9zoeHMyDy33+DWy5Wt9Wo+TURtOYSQ==}
