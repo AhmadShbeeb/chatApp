@@ -63,10 +63,6 @@ const loginUser = asyncHandler(async (req, res) => {
   } else {
     await RefreshToken.put({ token: refreshToken, user: userExists.items[0].key })
   }
-  // const savedRefreshToken = await RefreshToken.put({ token: generateRefreshToken(user.key), user: user[0].key })
-  // res.status(200).cookie('a', 1).cookie('b', 2).send()
-  // res.setHeader('Set-Cookie', ['cookie1=' + 1, 'cookie2=' + 2]).send()
-  // res.writeHead(200, { 'Set-Cookie': ['test1=' + 1, 'test2=' + 2] }).send()
 
   res.cookie('accessToken', generateAccessToken(userExists.items[0].key), { httpOnly: true, maxAge: maxAge * 1000 }) // cookie max age
   res.status(200).json({ user: userExists.items[0].key, refreshToken })

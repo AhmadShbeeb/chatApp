@@ -14,8 +14,6 @@ require('./config/passport')
 const app = express()
 const port = process.env.PORT || 5000
 
-// connectDB()
-
 // create a write stream (in append mode)
 // var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
@@ -56,23 +54,6 @@ app.get('/chats', protect, async (req, res) => {
 
   const chats = await Chat.put({ from: req.user.key, to: 'key', message: req.body.message })
   res.json({ chats })
-})
-
-app.post('/passport', protect, (req, res) => {
-  res.json(req.user)
-})
-
-app.get('/co', (req, res) => {
-  // res
-  // .cookie('a', 1, { httpOnly: false, sameSite: 'none', secure: true })
-  // .cookie('b', 2, { httpOnly: false, sameSite: 'none', secure: true })
-  // res.cookie('b', 2, { httpOnly: false })
-  // res.send()
-  // res.header('Access-Control-Allow-Headers', '*')
-  // res.append('Set-Cookie', ['a=1; Path=/; HttpOnly', 'b=2; Path=/; HttpOnly'])
-  // res.append('multiValueHeaders', 'Set-Cookie': ['cookie1=1', 'cookie2=2'])
-  // res.send()
-  res.header('Set-Cookie', ['cookie1=1', 'cookie2=2']).send()
 })
 
 app.use(errorHandler)
